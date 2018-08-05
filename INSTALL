@@ -1,0 +1,9 @@
+Building Vaultress
+
+See doc/readme-qt.rst for instructions on building Vaultress-Qt,
+the intended-for-end-users, nice-graphical-interface, reference
+implementation of Vaultress.
+
+See doc/build-*.txt for instructions on building vaultressd,
+the intended-for-services, no-graphical-interface, reference
+implementation of Vaultress.

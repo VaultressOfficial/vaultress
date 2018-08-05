@@ -1,0 +1,7 @@
+usr/local/bin/vaultress-qt usr/bin
+share/pixmaps/vaultress16.png usr/share/pixmaps
+share/pixmaps/vaultress32.png usr/share/pixmaps
+share/pixmaps/vaultress128.png usr/share/pixmaps
+share/pixmaps/vaultress256.png usr/share/pixmaps
+debian/vaultress-qt.desktop usr/share/applications
+debian/vaultress-qt.protocol usr/share/kde4/services/
