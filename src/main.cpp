@@ -3665,6 +3665,10 @@ void static ProcessGetData(CNode* pfrom)
                         // block might be rejected by stake connection check)
                         vector<CInv> vInv;
                         vInv.push_back(CInv(MSG_BLOCK, GetLastBlockIndex(pindexBest, false)->GetBlockHash()));
+
+						// Patched for smoother sync
+                        //vInv.push_back(CInv(MSG_BLOCK, hashBestChain));
+						
                         pfrom->PushMessage("inv", vInv);
                         pfrom->hashContinue = 0;
                     }
@@ -4020,7 +4024,7 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv)
         // Send the rest of the chain
         if (pindex)
             pindex = pindex->pnext;
-        int nLimit = 1000;
+        int nLimit = 500;
         printf("getblocks %d to %s limit %d\n", (pindex ? pindex->nHeight : -1), hashStop.ToString().c_str(), nLimit);
         for (; pindex; pindex = pindex->pnext)
         {
